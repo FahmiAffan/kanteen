@@ -11,7 +11,9 @@
 </head>
 
 <body>
-    <main id="kanteen"></main>
+    <main id="kanteen">
+        
+    </main>
 
     @vite('../js/app.js')
     <script src="../js/app.js"></script>
