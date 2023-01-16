@@ -7,7 +7,7 @@ export default {
 
     routes: [
         {
-            path: '/',
+            path: '/home',
             component: Home 
         },
         {
