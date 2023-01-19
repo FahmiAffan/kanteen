@@ -1,18 +1,24 @@
-import Home from '../views/home.vue'
-import About from '../views/about.vue'
+import {createRouter, createWebHistory } from "vue-router";
+import Home from "../views/home.vue";
+import About from "../views/about.vue";
 
 export default {
-
-    mode: 'history',
-
     routes: [
         {
-            path: '/home',
-            component: Home 
+            path : '/home',
+            name : "home",
+            component: Home
         },
         {
             path: '/about',
-            component: About 
+            name : "about",
+            component: About
         },
-    ]
-}
+    ],
+    router: createRouter({
+        history: createWebHistory(import.meta.env.BASE_URL),
+        routes,
+    }),
+
+    export : router
+};

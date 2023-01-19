@@ -4,33 +4,13 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-// import {createApp} from 'vue'
+import { createApp } from "vue";
 
-// import App from './App.vue'
+import App from "./App.vue";
+import Home from "./views/about.vue";
+import router from "./routes/index.js"
 
-// createApp(App).mount("#kanteen")
-
-//batas
-
-const Home = { template: "<div>Home</div>" };
-const About = { template: "<div>About</div>" };
-
-const routes = [
-    { path: "/home", component: Home },
-    { path: "/about", component: About },
-];
-
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory(),
-    routes,
-});
-
-const app = Vue.createApp({});
-app.use(router);
-
-app.mount("#kanteen");
-
-//bukaann \/
+createApp(App).use(router).mount("#kanteen");
 
 // const app = createApp({});
 
