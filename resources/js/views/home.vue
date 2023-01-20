@@ -1,10 +1,10 @@
 <template>
-  
+    <h1>Welcome Home</h1>
 </template>
 
 <script lang="ts">
 export default {
-    name : 'home'
+    name : 'Home'
 }
 </script>
 

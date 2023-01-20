@@ -7,7 +7,6 @@
 import { createApp } from "vue";
 
 import App from "./App.vue";
-import Home from "./views/about.vue";
 import router from "./routes/index.js"
 
 createApp(App).use(router).mount("#kanteen");
