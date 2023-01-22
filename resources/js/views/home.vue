@@ -1,13 +1,14 @@
 <template>
-    <h1>Welcome Home</h1>
+    <div>
+        <h1>navbar</h1>
+    </div>
 </template>
 
 <script lang="ts">
 export default {
-    name : 'Home'
-}
+  name: "Home",
+};
 </script>
 
 <style>
-
 </style>
