@@ -97,7 +97,7 @@
           >
             <li>
               <a
-              href="#"
+                href="#"
                 class="
                   block
                   py-2
@@ -115,7 +115,7 @@
             </li>
             <li>
               <a
-              href="#"
+                href="#"
                 class="
                   block
                   py-2
@@ -211,10 +211,83 @@
     </nav>
     <div class="grid">
       <div class="justify-content-center">
-        <h1 class="p-4 mt-9 text-6xl text-white">Welcome Page from Vue + Tailwind</h1>
+        <h1 class="p-4 mt-9 text-6xl text-white">
+          This page are made from Vue + Tailwind
+        </h1>
         <div class="p-4">
           <router-link to="/home">Home</router-link> |
           <router-link to="/about">About</router-link>
+        </div>
+      </div>
+      <div id="card" class="flex">
+        <div
+          class="
+            max-w-sm
+            bg-white
+            border border-gray-200
+            rounded-lg
+            shadow
+            dark:bg-gray-800 dark:border-gray-700
+            m-6
+          "
+          v-for="item in items"
+          v-bind:key="item"
+        >
+          <a href="#" class="bg-purple-300">
+            <img class="rounded-t-lg object-cover" v-bind:src="item.foto" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5
+                class="
+                  mb-2
+                  text-2xl
+                  font-bold
+                  tracking-tight
+                  text-gray-900
+                  dark:text-white
+                "
+              >
+                {{ item.message }}
+              </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              Here are the biggest enterprise technology acquisitions of 2021 so
+              far, in reverse chronological order.
+            </p>
+            <a
+              href="#"
+              class="
+                inline-flex
+                items-center
+                px-3
+                py-2
+                text-sm
+                font-medium
+                text-center text-white
+                bg-blue-700
+                rounded-lg
+                hover:bg-blue-800
+                focus:ring-4 focus:outline-none focus:ring-blue-300
+                dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+              "
+            >
+              Read more
+              <svg
+                aria-hidden="true"
+                class="w-4 h-4 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -228,6 +301,18 @@ export default {
   data() {
     return {
       title: "Fahmi affan",
+      items: [
+        {
+          foto:
+            "https://media.istockphoto.com/id/478470378/id/vektor/koleksi-gambar-sketsa-makanan.jpg?s=612x612&w=is&k=20&c=u_fLi6JFk-_vd_0fABfco9HJlUGdCWyxC5l-51krBmQ=",
+          message: "Chitato",
+        },
+        {
+          foto:
+            "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1608983819/iwtinvrdf1iwfzc7y6sr.jpg",
+          message: "Soto",
+        },
+      ],
     };
   },
 };
@@ -235,6 +320,6 @@ export default {
 
 <style>
 body {
-  height: 100vh;
+  height: max-content;
 }
 </style>
