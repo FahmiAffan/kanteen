@@ -15,6 +15,8 @@ class MakananController extends Controller
     public function index()
     {
         //
+        $data = Makanan::all();
+        return response()->json($data);
     }
 
     /**
@@ -36,6 +38,12 @@ class MakananController extends Controller
     public function store(Request $request)
     {
         //
+        $data = Makanan::create([
+            'nama_makanan' => $request->nama_makanan,
+            'harga_makanan' => $request->harga_makanan,
+            'rating_makanan' => $request->rating_makanan,
+        ]);
+        return response()->json($data);
     }
 
     /**
@@ -44,9 +52,11 @@ class MakananController extends Controller
      * @param  \App\Models\Makanan  $makanan
      * @return \Illuminate\Http\Response
      */
-    public function show(Makanan $makanan)
+    public function show(Makanan $makanan )
     {
         //
+        $data = Makanan::find($makanan);
+        return response()->json($data);
     }
 
     /**
@@ -70,6 +80,12 @@ class MakananController extends Controller
     public function update(Request $request, Makanan $makanan)
     {
         //
+        $makanan->update([
+            'nama_makanan' => $request->nama_makanan,
+            'harga_makanan' => $request->harga_makanan,
+            'rating_makanan' => $request->rating_makanan,
+        ]);
+        return response()->json($makanan);
     }
 
     /**
@@ -81,5 +97,7 @@ class MakananController extends Controller
     public function destroy(Makanan $makanan)
     {
         //
+        $makanan->delete();
+        return response()->json($makanan);
     }
 }

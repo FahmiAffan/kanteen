@@ -9,11 +9,8 @@ class Makanan extends Model
 {
     use HasFactory;
 
-    protected $table = "makanan";
+    protected $table = 'makanan';
 
-    protected $filable = [
-        "nama_makanan",
-        "harga_makanan",
-        "rating_makanan"
-    ];
+    protected $guarded = ['id_makanan'];
+    protected $primaryKey = 'id_makanan';
 }
