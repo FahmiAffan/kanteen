@@ -55,8 +55,6 @@ class MakananController extends Controller
     public function show(Makanan $makanan )
     {
         //
-        $data = Makanan::find($makanan);
-        return response()->json($data);
     }
 
     /**
