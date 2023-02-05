@@ -4,7 +4,6 @@ use App\Http\Controllers\PelangganController;
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
 |
@@ -18,6 +17,4 @@ Route::get('/{all}', function () {
     return view('index');
 })->where("all", ".*");
 
-
-
-// Route::get('/data' , PelangganController::class ['index']);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
