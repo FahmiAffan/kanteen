@@ -295,6 +295,9 @@
 </template>
 
 <script lang="ts">
+
+import axios from 'axios';
+
 export default {
   name: "Home",
 
@@ -315,6 +318,10 @@ export default {
       ],
     };
   },
+
+  mounted(){
+    axios.get('http://127.0.0.1:8000/api/makanan');
+  }
 };
 </script>
 
